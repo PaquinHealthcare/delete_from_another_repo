@@ -16,12 +16,12 @@ This GitHub Action removes a path from a remote repository
         - name: Remove test api.code-workspace file
           uses: PaquinHealthcare/delete_from_another_repo@master
           env:
-            API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+            API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
           with:
             path: 'api.code-workspace'
-            destination_repo: 'kafkasl/api'
+            destination_repo: '${{ github.repository }}'
             user_email: 'example@email.com'
-            user_name: 'dmnemec'
+            user_name: 'example'
             commit_message: 'A custom message for the commit'
 
 # Variables
