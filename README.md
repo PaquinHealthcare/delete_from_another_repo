@@ -14,7 +14,7 @@ This GitHub Action removes a path from a remote repository
           uses: actions/checkout@v3
 
         - name: Remove test api.code-workspace file
-          uses: kafkasl/delete_from_another_repo@master
+          uses: PaquinHealthcare/delete_from_another_repo@master
           env:
             API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
           with:
